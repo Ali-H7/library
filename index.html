@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <H1>Library</H1>
+    <dialog>
+        <div class="form">
+            <div>
+                <p>Title: </p>
+                <input type="text" id="title">
+            </div>
+            <div>
+                <p>Author: </p>
+                <input type="text" id="author">
+            </div>
+            <div>
+                <p>Pages: </p>
+                <input type="text" id="pages">
+            </div>
+            <div>
+                <p>Have you read the book? <input type="checkbox" name="" id="read"></p>
+            </div>
+        </div>
+        <button id="submit">Submit</button>
+        <button id="cancel">Cancel</button>
+    </dialog>
+    <button class="add">Add Book</button>
+    <div class="books">
+        <div class="card">
+            <p>Title: A Game of Thrones</p>
+            <p>Author: George R. R. Martin</p>
+            <p>Pages: 694</p>
+            <div>
+                <button class="read">Read: Yes</button>
+                <button class="delete">Delete</button>
+            </div>
+        </div>
+        <div class="card">
+            <p>Title: A Game of Thrones</p>
+            <p>Author: George R. R. Martin</p>
+            <p>Pages: 694</p>
+            <div>
+                <button class="read">Read: No</button>
+                <button class="delete">Delete</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

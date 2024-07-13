@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    margin-bottom: 4px;
+    box-sizing: border-box;
+    }
+.books {
+    display: flex;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    margin-left: 10px;
+    width: 300px;
+}
+
+.choice {
+    display: flex;
+}
+
+dialog {
+    padding: 30px;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+.card > div {
+    align-self: flex-end;
+}
+
+.read, .delete {
+    width: 70px;
+    height: 28px;
+}
