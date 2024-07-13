@@ -33,9 +33,9 @@ function addBookToLibrary() {
         card.classList.add("card");
         read.classList.add("read");
         deleteBtn.classList.add("delete");
-        title.textContent = `Title: ${array.title}`;
-        author.textContent = `Author: ${array.author}`;
-        pages.textContent = `Pages: ${array.pages}`;
+        title.innerHTML = `<b>Title:</b> ${array.title}`;
+        author.innerHTML = `<b>Author:</b> ${array.author}`;
+        pages.innerHTML = `<b>Pages:</b> ${array.pages}`;
         if (array.read) {
             read.textContent = "Read: Yes";
         } else {
@@ -54,11 +54,11 @@ function addBookToLibrary() {
             const cardRemove = deleteBtn.closest(".card")
             cardRemove.remove();
          }) 
-        emptyDiv.appendChild(read);
         emptyDiv.appendChild(deleteBtn);
         card.appendChild(title);
         card.appendChild(author);
         card.appendChild(pages);
+        card.appendChild(read);
         card.appendChild(emptyDiv);
         document.querySelector(".books").appendChild(card);
         myLibrary.length = 0; 

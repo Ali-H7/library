@@ -6,21 +6,25 @@
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 </head>
 <body>
-    <H1>Library</H1>
+    <header>
+        <H1>Library</H1>
+        <button class="add">Add Book</button>
+    </header>
     <dialog>
         <div class="form">
             <div>
-                <p>Title: </p>
+                <p><b>Title:</b> </p>
                 <input type="text" id="title">
             </div>
             <div>
-                <p>Author: </p>
+                <p><b>Author:</b> </p>
                 <input type="text" id="author">
             </div>
             <div>
-                <p>Pages: </p>
+                <p><b>Pages:</b> </p>
                 <input type="text" id="pages">
             </div>
             <div>
@@ -30,24 +34,25 @@
         <button id="submit">Submit</button>
         <button id="cancel">Cancel</button>
     </dialog>
-    <button class="add">Add Book</button>
-    <div class="books">
-        <div class="card">
-            <p>Title: A Game of Thrones</p>
-            <p>Author: George R. R. Martin</p>
-            <p>Pages: 694</p>
-            <div>
+    <div class="container">
+        <div class="books">
+            <div class="card">
+                <p><b>Title:</b> Dragon Ball</p>
+                <p><b>Author:</b> Akira Toriyama</p>
+                <p><b>Pages:</b> Over 9000!</p>
                 <button class="read">Read: Yes</button>
-                <button class="delete">Delete</button>
+                <div>
+                    <button class="delete">Delete</button>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <p>Title: A Game of Thrones</p>
-            <p>Author: George R. R. Martin</p>
-            <p>Pages: 694</p>
-            <div>
+            <div class="card">
+                <p><b>Title:</b> A Game of Thrones</p>
+                <p><b>Author:</b> George R. R. Martin</p>
+                <p><b>Pages:</b> 694</p>
                 <button class="read">Read: No</button>
-                <button class="delete">Delete</button>
+                <div>
+                    <button class="delete">Delete</button>
+                </div>
             </div>
         </div>
     </div>
