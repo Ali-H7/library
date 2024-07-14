@@ -14,6 +14,14 @@ function Book (title, author, pages, read) {
     this.read = read; 
 };
 
+Book.prototype.readStatus = function (bookIndex) {
+    if (myLibrary[bookIndex].read) {
+        myLibrary[bookIndex].read = false;
+    } else {
+        myLibrary[bookIndex].read = true;
+    }
+}
+
 function addBookToLibrary() {
     const title = document.querySelector("#title").value;
     const author = document.querySelector("#author").value;
@@ -49,12 +57,11 @@ function addBookToLibrary() {
         read.addEventListener ("click", (e) => {
             if (e.target.textContent == "Read: Yes") {
                 e.target.textContent = "Read: No";
-                myLibrary[i].read = false;
             } else {
                 e.target.textContent = "Read: Yes";
-                myLibrary[i].read = true;
             };
-            
+            const changeRead = Object.create(Book.prototype);
+            changeRead.readStatus(i);
          });
         deleteBtn.addEventListener ("click",() => {
             const cardRemove = deleteBtn.closest(".card");
