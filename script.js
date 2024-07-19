@@ -7,20 +7,22 @@ const myLibrary = [
     },
 ];
 
-function Book (title, author, pages, read) {
-    this.title = title;
-    this.author = author; 
-    this.pages = pages; 
-    this.read = read; 
-};
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author; 
+        this.pages = pages; 
+        this.read = read; 
+    };
 
-Book.prototype.readStatus = function (bookIndex) {
-    if (myLibrary[bookIndex].read) {
-        myLibrary[bookIndex].read = false;
-    } else {
-        myLibrary[bookIndex].read = true;
-    }
-}
+    static readStatus(bookIndex) {
+        if (myLibrary[bookIndex].read) {
+            myLibrary[bookIndex].read = false;
+        } else {
+            myLibrary[bookIndex].read = true;
+        };
+    };
+};
 
 function addBookToLibrary() {
     const title = document.querySelector("#title").value;
@@ -60,8 +62,7 @@ function addBookToLibrary() {
             } else {
                 e.target.textContent = "Read: Yes";
             };
-            const changeRead = Object.create(Book.prototype);
-            changeRead.readStatus(i);
+            Book.readStatus(i);
          });
         deleteBtn.addEventListener ("click",() => {
             const cardRemove = deleteBtn.closest(".card");
