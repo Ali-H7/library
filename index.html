@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <H1>Library</H1>
-        <button class="add">Add Book</button>
+      <h1>Library</h1>
+      <button class="add">Add Book</button>
     </header>
     <dialog>
+      <form action="" novalidate>
         <div class="form">
-            <div>
-                <p><b>Title:</b> </p>
-                <input type="text" id="title">
-            </div>
-            <div>
-                <p><b>Author:</b> </p>
-                <input type="text" id="author">
-            </div>
-            <div>
-                <p><b>Pages:</b> </p>
-                <input type="text" id="pages">
-            </div>
-            <div>
-                <p>Have you read the book? <input type="checkbox" name="" id="read"></p>
-            </div>
+          <div>
+            <p><b>Title:</b></p>
+            <input type="text" id="title" required />
+          </div>
+          <div>
+            <p><b>Author:</b></p>
+            <input type="text" id="author" required />
+          </div>
+          <div>
+            <p><b>Pages:</b></p>
+            <input type="number" id="pages" min="0" required />
+          </div>
+          <div>
+            <p>
+              Have you read the book?
+              <input type="checkbox" name="" id="read" required />
+            </p>
+          </div>
         </div>
         <button id="submit">Submit</button>
-        <button id="cancel">Cancel</button>
+        <button type="button" id="cancel">Cancel</button>
+      </form>
     </dialog>
     <div class="container">
-        <div class="books">
-        </div>
+      <div class="books"></div>
     </div>
-</body>
+  </body>
 </html>
